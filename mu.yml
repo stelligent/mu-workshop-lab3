@@ -1,0 +1,11 @@
+service:
+  name: milkshake-service
+  port: 8080
+  pathPatterns:
+  - /milkshakes*
+  pipeline:
+    source:
+      provider: CodeCommit
+      repo: milkshake-service
+    build:
+      image: aws/codebuild/java:openjdk-8
