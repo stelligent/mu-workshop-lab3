@@ -1,0 +1,14 @@
+spring:
+  application.name: milkshake-service
+  jackson.serialization.write_dates_as_timestamps: false
+  cloud.consul.discovery:
+    failFast: false
+    register: false
+  cloud.discovery.client.composite-indicator.enabled: false
+
+management.health:
+  consul.enabled: false
+---
+spring:
+  profiles: mu
+  cloud.consul.host: 172.17.0.1
