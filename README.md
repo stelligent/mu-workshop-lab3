@@ -93,9 +93,12 @@ While we wait for the pipeline to run, let's explore what mu created:
 * **Consul UI** -
     * Get the bastion host and ECS instance IP via `mu env show dev`
     * Login to bastion host `ssh -i ~/.ssh/id_rsa ec2-user@<bastion-ip>`
-    * Get the URL for the Consul UI: `aws cloudformation describe-stacks --stack-name mu-consul-dev --query "Stacks[].Outputs[?OutputKey=='ConsulUiUrl'].OutputValue" --output text`
+    * Get the URL for the Consul UI:
+```
+aws cloudformation describe-stacks --stack-name mu-consul-dev --query "Stacks[].Outputs[?OutputKey=='ConsulUiUrl'].OutputValue" --output text
+```
     * Configure your SOCKS5 proxy to `localhost:8080`
-    * Navigate to http://<Consul UI ELB>/ui/
+    * Navigate to `http://<Consul UI ELB>/ui/`
     * If unable to configure proxy, try curl and notice how many of each server is running.  What is the `ServicePort`?
 
 ```
