@@ -80,6 +80,11 @@ git push
 # Explore and wait...
 While we wait for the pipeline to run, let's explore what mu created:
 
+* **Source code** - BananaProvider.java
+    * Look at the BananaProvider class in the milkshake-service.  How does the milkshake-service call he banana-service?
+    * What is the significance of the hostname in the URL for the call that milkshake service makes to the banana service?
+    * What would have happened if we hadn't forced the banana service to be `desiredCount` of `1`?
+
 * **CloudFormation console** - Whats's new?
     * Navigate to the CloudFormation console.  What's included in the new `mu-consul-dev` stack?
 
